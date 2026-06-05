@@ -48,6 +48,16 @@ function captureUTMFields(form) {
             input.value = getUTM(name);
         }
     });
+
+    const exactUrlField = form.querySelector('[name="exact_url"]');
+    if (exactUrlField) {
+        exactUrlField.value = window.location.href;
+    }
+
+    const searchTermField = form.querySelector('[name="search_term"]');
+    if (searchTermField) {
+        searchTermField.value = getUTM('utm_term');
+    }
 }
 
 function redirectThankYou() {
