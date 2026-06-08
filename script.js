@@ -1023,16 +1023,6 @@ function initDeferredScripts() {
             once: true
         });
     });
-
-    setTimeout(function () {
-
-        const script = document.createElement('script');
-
-        script.src = 'https://leadsquared-script-url.js';
-
-        document.body.appendChild(script);
-
-    }, 3000);
 }
 
 // ======================================================
